@@ -869,3 +869,5 @@ function lib:Create(name)
 	
 	return window
 end
+
+return lib
