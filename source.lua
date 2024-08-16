@@ -1,5 +1,11 @@
 -- delete old instance
 
+_G.main_run_connection = nil
+
+if _G.main_run_connection then
+	_G.main_run_connection:Disconnect()
+end
+
 if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("slack") then
 	game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("slack"):Destroy()
 end
@@ -245,7 +251,7 @@ function lib:Create(name)
 		coloring = false
 	end)
 
-	game:GetService("RunService").RenderStepped:Connect(function()
+	_G.main_run_connection = game:GetService("RunService").RenderStepped:Connect(function()
 		local t = os.date("*t")
 		InfoText.Text = name.. " | "..workspace.Parent.Name.." | "..getTime()
 
@@ -864,5 +870,3 @@ function lib:Create(name)
 	
 	return window
 end
-
-return lib
