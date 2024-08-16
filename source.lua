@@ -1,9 +1,8 @@
 -- delete old instance
 
-_G.main_run_connection
-
 if _G.main_run_connection then
-	_G.main_run_connection:Disconnect()
+    _G.main_run_connection:Disconnect()
+    _G.main_run_connection = nil
 end
 
 if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("slack") then
