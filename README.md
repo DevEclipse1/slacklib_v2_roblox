@@ -4,7 +4,7 @@ drawing library for roblox exploits, strictly for educational purposes only!
 ![image](https://github.com/user-attachments/assets/317b3e8b-a8f1-4d65-bbb5-0f370ed86aa5)
 
 Example:
-```
+```luau
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/DevEclipse1/slacklib_v2_roblox/main/source.lua"))()
 
 local window = lib:Create("Slacklib v2")
