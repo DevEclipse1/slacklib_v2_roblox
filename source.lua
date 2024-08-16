@@ -287,7 +287,9 @@ function lib:Create(name)
 		Color.BackgroundColor3 = rgbColor
 		
 		if color_picker_associated_with then
-			color_picker_associated_with:FindFirstChild("Preview").BackgroundColor3 = rgbColor
+			if color_picker_associated_with:FindFirstChild("Preview") then
+				 color_picker_associated_with:FindFirstChild("Preview").BackgroundColor3 = rgbColor
+			end
 		end
 	end)
 	
