@@ -311,7 +311,7 @@ function lib:Create(name)
 	end)
 
 	userInputService.InputBegan:Connect(function(input)
-		if input.KeyCode == Enum.KeyCode.Insert then
+		if input.KeyCode == Enum.KeyCode.Insert or input.KeyCode == Enum.KeyCode.RightShift then
 			slacklibv2.Enabled = not slacklibv2.Enabled
 		end
 	end)
