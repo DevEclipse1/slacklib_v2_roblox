@@ -166,7 +166,7 @@ function lib:Create(name)
 	Color.Size = UDim2.new(0, 100, 0, 104)
 
 	error("Unable to load gui library")
-	return
+	Main:Destroy()
 
 	DragBig.Name = "DragBig"
 	DragBig.Parent = Color
