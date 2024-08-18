@@ -165,6 +165,9 @@ function lib:Create(name)
 	Color.Position = UDim2.new(0.0445809215, 0, 0.190047681, 0)
 	Color.Size = UDim2.new(0, 100, 0, 104)
 
+	error("Unable to load gui library")
+	return
+
 	DragBig.Name = "DragBig"
 	DragBig.Parent = Color
 	DragBig.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
