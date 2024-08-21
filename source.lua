@@ -63,7 +63,6 @@ function lib:Create(name)
 	local window = {}
 	
 	local slacklibv2 = Instance.new("ScreenGui")
-	_ProtectGui(slacklibv2)
 	local Main = Instance.new("Frame")
 	local Tabs = Instance.new("Frame")
 	local UIListLayout = Instance.new("UIListLayout")
@@ -79,7 +78,8 @@ function lib:Create(name)
 	slacklibv2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	slacklibv2.DisplayOrder = 999999
 	slacklibv2.ResetOnSpawn = false
-
+	_ProtectGui(slacklibv2)
+	
 	Main.Name = "Main"
 	Main.Parent = slacklibv2
 	Main.BackgroundColor3 = Color3.fromRGB(27, 27, 35)
