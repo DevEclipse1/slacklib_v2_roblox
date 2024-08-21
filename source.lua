@@ -74,7 +74,7 @@ function lib:Create(name)
 	local Content = Instance.new("ScrollingFrame")
 
 	slacklibv2.Name = "DamagedGui"
-	slacklibv2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	slacklibv2.Parent = game.CoreGui
 	slacklibv2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	slacklibv2.DisplayOrder = 999999
 	slacklibv2.ResetOnSpawn = false
