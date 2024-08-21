@@ -1,3 +1,5 @@
+local _ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
+
 -- delete old instance
 
 if _G.main_run_connection then
@@ -5,8 +7,8 @@ if _G.main_run_connection then
     _G.main_run_connection = nil
 end
 
-if game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("slack") then
-	game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("slack"):Destroy()
+if game.CoreGui:FindFirstChild("DamagedGui") then
+	game.CoreGui:FindFirstChild("DamagedGui"):Destroy()
 end
 
 -- utils
@@ -61,6 +63,7 @@ function lib:Create(name)
 	local window = {}
 	
 	local slacklibv2 = Instance.new("ScreenGui")
+	_ProtectGui(slacklibv2)
 	local Main = Instance.new("Frame")
 	local Tabs = Instance.new("Frame")
 	local UIListLayout = Instance.new("UIListLayout")
@@ -71,7 +74,7 @@ function lib:Create(name)
 	local InfoText = Instance.new("TextLabel")
 	local Content = Instance.new("ScrollingFrame")
 
-	slacklibv2.Name = "slack"
+	slacklibv2.Name = "DamagedGui"
 	slacklibv2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 	slacklibv2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	slacklibv2.DisplayOrder = 999999
